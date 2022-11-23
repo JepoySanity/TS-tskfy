@@ -19,7 +19,11 @@ const TodoItem: React.FC<Props> = ({todo, todos, setTodos}) => {
   }
 
   const handleDelete = (id: number) => {
-
+    setTodos(
+      todos.filter((todo) => 
+        todo.id !== id
+      )
+    )
   }
 
   return (
